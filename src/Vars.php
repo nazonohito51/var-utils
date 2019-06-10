@@ -13,8 +13,11 @@ class Vars
         $ret = [];
 
         foreach ($varNames as $varName) {
-            if (is_string($varName) && isset($vars[$varName])) {
-                $ret[$varName] = $vars[$varName];
+            if (is_string($varName)) {
+                $keys = array_keys($vars);
+                if (in_array($varName, $keys)) {
+                    $ret[$varName] = $vars[$varName];
+                }
             } elseif (is_array($varName)) {
                 $ret = array_merge($ret, self::compact($vars, ...$varName));
             }
