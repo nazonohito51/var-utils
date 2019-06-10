@@ -1,0 +1,26 @@
+{
+    "name": "nazonohito51/var-utils",
+    "description": "var utils",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SatoshiKawashima",
+            "email": "nazonohito51@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VarUtils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": ["vendor/autoload.php"]
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8"
+    }
+}
